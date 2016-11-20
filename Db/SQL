@@ -1,0 +1,2 @@
+CREATE TABLE `simulator`.`t_user` ( `us_id` INT UNSIGNED NOT NULL AUTO_INCREMENT , `us_login` VARCHAR(255) NOT NULL , `us_email` VARCHAR(255) NOT NULL , `us_password` VARCHAR(255) NOT NULL , `us_role` INT UNSIGNED NOT NULL DEFAULT '0' , PRIMARY KEY (`us_id`)) ENGINE = MyISAM;
+
