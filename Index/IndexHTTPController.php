@@ -7,7 +7,7 @@ class IndexHTTPController
 {
     public function index()
     {
-        $Skeleton = (new Skeleton())->addQuad('Skeleton');
+        $Skeleton = (new Skeleton())->addQuad('SkeletonTpl');
     }
     
 }

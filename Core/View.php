@@ -24,13 +24,12 @@ class View
 
     public function addQuad($tplName) 
     {
-        $tplFile = $tplName . '.tpl';
-        var_dump(__DIR__.'..\Index\Quad\Skeleton\\'.$tplFile);
+        $tplFile = __DIR__.'\\..\Index\Quad\Skeleton\\'.$tplName . '.php';
+        
         if (is_file($tplFile)) {
             extract($this->data);
             ob_start();
             include $tplFile;
-
             return ob_get_clean();
         } else {
             die('Nie działa templatka!');
