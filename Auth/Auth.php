@@ -17,9 +17,4 @@ class Auth
         
     }
     
-    public function addUser()
-    {
-        $this->AuthModel->addUser();
-    }
-    
 }

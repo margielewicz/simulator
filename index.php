@@ -1,12 +1,10 @@
 <?php 
+use \Core\Router;
 
 function my_autoloader($file) {
     include $file . '.php';
 }
 
-
 spl_autoload_register('my_autoloader');
 
-var_dump($_SERVER['REQUEST_URI']);
-//(new User\UserHTTPController)->addUser();
-
+(new Router($_SERVER['REQUEST_URI']));
