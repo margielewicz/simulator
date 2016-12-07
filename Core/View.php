@@ -1,11 +1,12 @@
 <?php
 namespace Core;
 
-class View {
-
+class View 
+{
     private $data = [];
 
-    public function with($key, $value = null) {
+    public function set($key, $value = null) 
+    {
         if (is_array($key)) {
             foreach ($key as $varName => $varKey) {
                 if (is_string($varName)) {
@@ -21,9 +22,10 @@ class View {
         return $this;
     }
 
-    public function parse($tplName) {
-        $tplFile = PATH_TEMPLATE . $tplName . '.php';
-
+    public function addQuad($tplName) 
+    {
+        $tplFile = $tplName . '.tpl';
+        var_dump(__DIR__.'..\Index\Quad\Skeleton\\'.$tplFile);
         if (is_file($tplFile)) {
             extract($this->data);
             ob_start();

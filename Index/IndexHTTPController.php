@@ -1,11 +1,13 @@
 <?php
 namespace Index;
 
+use Index\Quad\Skeleton\Skeleton;
+
 class IndexHTTPController
 {
     public function index()
     {
-        echo 'x';
+        $Skeleton = (new Skeleton())->addQuad('Skeleton');
     }
     
 }
